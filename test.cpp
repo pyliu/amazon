@@ -57,7 +57,7 @@ int main() {
 
     replaceBlank(buffer, tmp.length()+1+5*2);
     cout << "after: " << buffer << endl;
-    
+
     delete [] buffer;
 
     return 0;
