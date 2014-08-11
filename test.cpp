@@ -1,7 +1,30 @@
 #include <iostream>
 #include <string>
-#include <cstdio>
+#include <cstdlib>
+
 using namespace std;
+
+void replaceBlank(char string[], int capacity);
+
+int main() {
+    string tmp("Hello World! This is a test!!");
+    char* buffer = new char[tmp.length()+1+5*2];
+
+    cout << "size: " << tmp.size() << endl;
+    cout << "length: " << tmp.length() << endl;
+    size_t length = tmp.copy(buffer, tmp.length(), 0);
+    cout << "copied: " << length << endl;
+    cout << "strlen: " << strlen(buffer) << endl;
+
+    cout << "original: " << tmp << endl;
+
+    replaceBlank(buffer, tmp.length()+1+5*2);
+    cout << "after: " << buffer << endl;
+
+    delete [] buffer;
+
+    return 0;
+}
 
 /*capacity is total capacity of a string, which is longer than its actual length*/
 void replaceBlank(char string[], int capacity) {
@@ -43,22 +66,3 @@ void replaceBlank(char string[], int capacity) {
     }
 }
 
-int main() {
-    string tmp("Hello World! This is a test!!");
-    char* buffer = new char[tmp.length()+1+5*2];
-
-    cout << "size: " << tmp.size() << endl;
-    cout << "length: " << tmp.length() << endl;
-    size_t length = tmp.copy(buffer, tmp.length(), 0);
-    cout << "copied: " << length << endl;
-    cout << "strlen: " << strlen(buffer) << endl;
-
-    cout << "original: " << tmp << endl;
-
-    replaceBlank(buffer, tmp.length()+1+5*2);
-    cout << "after: " << buffer << endl;
-
-    delete [] buffer;
-
-    return 0;
-}
