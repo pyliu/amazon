@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// http://zh.wikipedia.org/wiki/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F
 void print(const string& prefix, int number[], int len)
 {
     cout << prefix;
@@ -35,6 +36,7 @@ void bubble(int number[], int len)
     print("bubble sort after: ", number, len);
 }
 
+// http://zh.wikipedia.org/wiki/%E9%B8%A1%E5%B0%BE%E9%85%92%E6%8E%92%E5%BA%8F
 void cocktail(int number[], int len)
 {
     print("cocktail sort before: ", number, len);
@@ -81,6 +83,7 @@ void selection(int* number, int len)
 {
 }
 
+// reference: http://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F
 int main()
 {
     int number[12] = {95,45,15,78,84,51,24,12,56,74,11,23};
@@ -88,7 +91,6 @@ int main()
 
     int number2[12] = {95,45,15,78,84,51,24,12,56,74,11,23};
     cocktail(number2, 12);
-
 
     return 0;
 }
