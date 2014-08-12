@@ -12,13 +12,13 @@ void print(int number[], int len)
     cout<<endl;
 }
 
-void bubble(int number[], int LENGTH)
+void bubble(int number[], int len)
 {
-    print(number, LENGTH);
+    print(number, len);
     int temp;
-    for(int i=0;i<LENGTH;i++)
+    for(int i=0;i<len;i++)
     {
-        for(int j=0;j<LENGTH-1-i;j++)
+        for(int j=0;j<len-1-i;j++)
         {
             if(number[j]>number[j+1])
             {
@@ -28,7 +28,7 @@ void bubble(int number[], int LENGTH)
             } //if end
         }
     }
-    print(number, LENGTH);
+    print(number, len);
 }
 
 int main()
