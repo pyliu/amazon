@@ -33,7 +33,7 @@ public:
 
     unsigned int add(char key) {
         if (this->lookup.find(key) == this->lookup.end()) {
-            this->lookup[key] = 0;
+            this->lookup[key] = 1;
         } else {
             this->lookup[key] =  this->lookup[key] + 1;
         }
@@ -50,7 +50,7 @@ public:
 int main() {
     Stream test("ICELANDIC");
     for (int i=0; i<9; i++) {
-        cout << test.getNextCharacter() << endl;
+        cout << "char: " << test.getNextCharacter() << endl;
     }
     // print the map content to know the counter for each key
     test.print();
